@@ -1,0 +1,5 @@
+import type { Metadata } from 'next';
+import { Header, Footer, PageHero, ContactBand } from '@/components/site-shell';
+import { ProgramExplorer } from '@/components/program-explorer';
+export const metadata: Metadata={title:'Technology Training',description:'Explore hands-on programs in cybersecurity, data science, Azure, hardware, networking, and web development at Hashbay.'};
+export default function TrainingPage(){return <><Header/><main id="main"><PageHero label="Hashbay training" title="Keep learning." accent="Keep moving." description="Hands-on training, industry-relevant knowledge, and soft-skill development. Build practical technology skills for academic and career growth."/><ProgramExplorer/><section className="learning-philosophy"><div className="shell"><p className="section-label">Knowledge into practice</p><h2 data-reveal>Understand it.<br/>Work with it.<br/><span>Build on it.</span></h2><p>Explore the tools and technologies shaping today&apos;s digital landscape, through programs that combine technical learning with practical application.</p></div></section><ContactBand/></main><Footer/></>;}

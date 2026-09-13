@@ -1,0 +1,560 @@
+We are beginning a complete professional redesign of the website for HASHBAY TECHNOLOGY PRIVATE LIMITED.
+
+This is a REAL company website that will eventually replace the company's existing production website. Treat this as professional client work, not a demo, student project, hackathon project, or generic landing-page exercise.
+
+CURRENT WEBSITE:
+https://hashbaytechnology.com/
+
+PRIMARY COMPANY SOURCE:
+./reference/HASHBAY-Company-Profile.pdf
+
+The company profile is the authoritative source for company-specific facts.
+
+==================================================
+USE THE INSTALLED SKILLS
+==================================================
+
+Use the relevant installed skills where appropriate, especially:
+
+- frontend-app-builder
+- nextjs
+- react-best-practices
+- shadcn
+- frontend-testing-debugging
+
+For THIS phase, focus primarily on research, product/design thinking, information architecture, content strategy, and frontend-app-builder's design methodology.
+
+Do NOT implement anything yet.
+
+==================================================
+PHASE 1 — DISCOVERY, AUDIT & DESIGN STRATEGY
+==================================================
+
+Do not create, modify, delete, rename, scaffold, or install anything in the project.
+
+Your task is to understand the company and develop the strongest possible direction for its new website BEFORE writing code.
+
+------------------------------
+1. UNDERSTAND HASHBAY
+------------------------------
+
+Read the ENTIRE company profile PDF.
+
+Extract and organize only genuine company information such as:
+
+- what Hashbay does
+- services
+- IT infrastructure capabilities
+- cloud capabilities
+- cybersecurity capabilities
+- software development capabilities
+- staffing / consulting capabilities
+- support services
+- training programs
+- reasons customers might choose Hashbay
+- contact information
+- existing brand elements
+
+Identify obvious template filler, placeholder content, incomplete sections, generic template text, and questionable content separately.
+
+DO NOT treat placeholder/template text as genuine company information.
+
+Do not invent:
+
+- customers
+- partners
+- certifications
+- awards
+- testimonials
+- case studies
+- employee counts
+- years of experience
+- project counts
+- offices
+- revenue
+- statistics
+- performance metrics
+- guarantees
+- claims that are not supported by the source material
+
+If something is uncertain, mark it as requiring confirmation.
+
+------------------------------
+2. AUDIT THE EXISTING WEBSITE
+------------------------------
+
+Inspect:
+
+https://hashbaytechnology.com/
+
+Use available browser/web capabilities where useful.
+
+Evaluate the current website's:
+
+- first impression
+- professionalism
+- visual hierarchy
+- branding
+- typography
+- colors
+- spacing
+- imagery
+- navigation
+- information architecture
+- service presentation
+- copy
+- calls to action
+- credibility/trust
+- responsiveness
+- mobile experience
+- accessibility
+- technical SEO
+- metadata
+- semantic structure
+- performance
+- perceived quality
+
+Identify specifically what should be:
+
+KEEP
+IMPROVE
+REMOVE
+REPLACE
+
+Do not preserve something merely because the old website uses it.
+
+However, retain enough recognizable brand DNA that this feels like a major evolution of Hashbay rather than an unrelated company.
+
+------------------------------
+3. COMPETITIVE / DESIGN RESEARCH
+------------------------------
+
+Research excellent CURRENT websites in areas relevant to Hashbay, such as:
+
+- enterprise IT services
+- IT consulting
+- cloud infrastructure
+- cybersecurity
+- managed IT services
+- software engineering
+- technology consulting
+
+Study them for DESIGN PRINCIPLES, not for copying.
+
+Analyze things such as:
+
+- navigation
+- hero composition
+- information density
+- typography
+- grid systems
+- visual hierarchy
+- trust-building
+- service presentation
+- CTA strategy
+- use of photography
+- technical graphics
+- motion
+- transitions
+- responsive behavior
+- footer structure
+
+Do NOT clone another company's website, copy proprietary copy, or reproduce its brand identity.
+
+Extract useful principles and explain how they could be adapted into an original Hashbay identity.
+
+------------------------------
+4. DEFINE THE TARGET EXPERIENCE
+------------------------------
+
+The new Hashbay website should feel:
+
+PREMIUM
+ESTABLISHED
+TECHNICAL
+TRUSTWORTHY
+MODERN
+ENTERPRISE
+CONFIDENT
+FAST
+CLEAN
+
+It should look like a professional digital agency designed it for a serious B2B technology company.
+
+It should NOT look like:
+
+- a student project
+- a startup template
+- a crypto website
+- a generic SaaS template
+- an AI-generated landing page
+- a theme purchased and filled with text
+
+Avoid common AI-generated design clichés:
+
+- purple/blue gradient overload
+- glowing blobs everywhere
+- excessive glassmorphism
+- excessive pills
+- every section inside rounded cards
+- endless three-column card grids
+- meaningless floating dashboards
+- random decorative charts
+- fake statistics
+- fake testimonials
+- giant empty hero sections
+- excessive gradient text
+- unnecessary neon effects
+- random animations
+- buzzword-heavy copy
+
+Visual effects should exist only when they improve hierarchy, storytelling, interaction, or brand identity.
+
+------------------------------
+5. CREATE A DESIGN SYSTEM DIRECTION
+------------------------------
+
+Develop ONE strong cohesive visual direction.
+
+Do not give me five generic themes to choose from.
+
+Define:
+
+BRAND PERSONALITY
+
+COLOR SYSTEM
+- primary
+- secondary
+- accent
+- neutrals
+- backgrounds
+- borders
+- semantic colors
+- approximate hex values
+
+TYPOGRAPHY
+- recommended font families
+- display typography
+- body typography
+- weights
+- approximate type scale
+- line-height philosophy
+- maximum readable line lengths
+
+LAYOUT
+- max content width
+- grid philosophy
+- spacing system
+- section rhythm
+- desktop composition
+- tablet adaptation
+- mobile adaptation
+
+COMPONENT LANGUAGE
+- buttons
+- cards where actually appropriate
+- navigation
+- service presentation
+- accordions
+- forms
+- badges
+- icons
+- dividers
+- CTA sections
+- footer
+
+VISUAL MOTIFS
+
+Develop subtle visual motifs inspired by concepts relevant to Hashbay such as:
+
+- networks
+- infrastructure
+- data flow
+- systems
+- connectivity
+- cloud architecture
+- cybersecurity
+- engineering
+
+Keep them sophisticated and restrained.
+
+------------------------------
+6. IMAGERY STRATEGY
+------------------------------
+
+Determine where the website should use:
+
+- real photography
+- abstract technical graphics
+- diagrams
+- icons
+- generated/custom visual assets
+- CSS/SVG decorative graphics
+
+Avoid generic stock-photo overload.
+
+Specify what type of imagery would make Hashbay appear credible and established.
+
+Do not generate the assets yet.
+
+------------------------------
+7. MOTION & INTERACTION
+------------------------------
+
+Define a restrained motion system.
+
+Consider:
+
+- navigation transitions
+- hero entrance
+- scroll reveals
+- hover feedback
+- service interactions
+- subtle background movement
+- CTA feedback
+- mobile interactions
+
+Motion must remain:
+
+- performant
+- professional
+- accessible
+- subtle
+
+Respect prefers-reduced-motion.
+
+No animation should exist merely because animation is possible.
+
+------------------------------
+8. INFORMATION ARCHITECTURE
+------------------------------
+
+Determine the strongest site structure.
+
+At minimum evaluate:
+
+Home
+About
+Services
+Training
+Contact
+
+Decide whether services should have dedicated pages or a structured services page.
+
+Determine how infrastructure/AMC/networking services should relate to:
+
+Cloud
+Cybersecurity
+Software Development
+Staffing / Consulting
+Customer Support
+
+Create the proposed navigation hierarchy.
+
+------------------------------
+9. HOMEPAGE ARCHITECTURE
+------------------------------
+
+Design the homepage section-by-section.
+
+For every section explain:
+
+- purpose
+- content
+- layout
+- visual treatment
+- user action
+- why it belongs there
+
+Pay special attention to the HERO.
+
+The hero must communicate what Hashbay actually does within seconds.
+
+Avoid vague headlines such as:
+
+"Empowering the Future"
+"Innovating Tomorrow"
+"Transform Your Digital Future"
+
+Create messaging grounded in the company's actual services.
+
+------------------------------
+10. CONTENT STRATEGY
+------------------------------
+
+Rewrite awkward or template-like content into professional B2B language while preserving factual meaning.
+
+Define:
+
+- tone of voice
+- headline style
+- paragraph style
+- CTA language
+- service descriptions
+- trust language
+
+Never manufacture credibility.
+
+If credibility information is missing, design around that limitation instead of inventing it.
+
+------------------------------
+11. RESPONSIVE EXPERIENCE
+------------------------------
+
+Explicitly plan for:
+
+1440px desktop
+1024px laptop/tablet landscape
+768px tablet
+390px mobile
+
+The mobile site must feel intentionally designed rather than merely stacked desktop sections.
+
+Consider:
+
+- navigation
+- typography
+- content ordering
+- touch targets
+- spacing
+- images
+- cards
+- grids
+- CTAs
+- forms
+
+------------------------------
+12. ACCESSIBILITY
+------------------------------
+
+Plan for:
+
+- semantic HTML
+- logical heading hierarchy
+- keyboard navigation
+- visible focus states
+- sufficient contrast
+- accessible navigation
+- accessible forms
+- meaningful alt text
+- reduced motion
+- appropriate ARIA only where necessary
+
+Target WCAG 2.2 AA principles.
+
+------------------------------
+13. SEO STRATEGY
+------------------------------
+
+Plan the future implementation for:
+
+- descriptive page titles
+- meta descriptions
+- canonical URLs
+- Open Graph
+- Twitter/social metadata
+- sitemap
+- robots
+- semantic HTML
+- structured heading hierarchy
+- organization/service structured data where factually appropriate
+- image optimization
+- internal linking
+
+The current site's generic Flutter metadata should not survive the redesign.
+
+------------------------------
+14. TECHNICAL DIRECTION
+------------------------------
+
+We expect the eventual implementation to use approximately:
+
+Next.js
+TypeScript
+Tailwind CSS
+shadcn/ui where useful
+Lucide icons where appropriate
+next/font
+next/image
+
+Do not blindly use a library merely because it is available.
+
+Favor:
+
+- Server Components by default
+- minimal client JavaScript
+- reusable components
+- semantic markup
+- strong performance
+- maintainable architecture
+- minimal dependencies
+
+Do NOT initialize or install anything during this phase.
+
+------------------------------
+15. DOMAIN DISCREPANCY
+------------------------------
+
+The live site uses:
+
+hashbaytechnology.com
+
+The company profile may reference:
+
+hashbaytechnology.co.in
+
+Do not assume which domain should be canonical.
+
+Flag this explicitly as something that needs confirmation before production launch.
+
+==================================================
+DELIVERABLE
+==================================================
+
+At the end, give me a structured DESIGN BRIEF containing:
+
+1. Executive assessment of the current Hashbay website
+2. Verified company understanding
+3. Content that should NOT be reused
+4. Target customer interpretation
+5. Competitive/design research findings
+6. Brand personality
+7. Proposed visual direction
+8. Color system
+9. Typography system
+10. Layout/grid/spacing system
+11. Component language
+12. Imagery strategy
+13. Motion strategy
+14. Proposed sitemap
+15. Navigation structure
+16. Detailed homepage architecture
+17. Other page architectures
+18. Content/tone strategy
+19. Responsive strategy
+20. Accessibility strategy
+21. SEO strategy
+22. Technical architecture recommendation
+23. Information/assets requiring confirmation from the company
+24. Major risks or weaknesses we should address
+25. Final explanation of why this direction is appropriate for Hashbay
+
+Be opinionated.
+
+Do not simply repeat the company profile.
+
+Make actual professional design decisions.
+
+If an idea would make the website look generic, reject it.
+
+If the existing branding is weak, evolve it intelligently without unnecessarily replacing recognizable company identity.
+
+REMEMBER:
+
+DO NOT WRITE CODE.
+DO NOT CREATE FILES.
+DO NOT MODIFY FILES.
+DO NOT INSTALL PACKAGES.
+
+This phase ends with the design brief only.
+Wait for approval before implementation.

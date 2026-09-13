@@ -1,0 +1,6 @@
+import type { Metadata } from 'next';
+import { Header, Footer, PageHero, ContactBand } from '@/components/site-shell';
+import { CapabilityExplorer } from '@/components/capability-explorer';
+import { stages } from '@/lib/content';
+export const metadata: Metadata={title:'Technology Services',description:'Explore infrastructure, cloud, cybersecurity, software, IT staffing, service desk, and AMC services from Hashbay.'};
+export default function ServicesPage(){return <><Header/><main id="main"><PageHero label="Our services" title="Many capabilities." accent="One connected view." description="From physical infrastructure to the cloud, from custom software to the people supporting it. Services aligned with industry standards and client SLAs."/><CapabilityExplorer/><section className="service-approach section"><div className="shell"><div className="section-label"><span>From intent to operation</span><span>The Hashbay approach</span></div><h2 className="display-section" data-reveal>Technology has a lifecycle.<br/><span>We work across it.</span></h2><div className="service-stages">{stages.map((stage,i)=><article key={stage.name} data-reveal><span className="mono">0{i+1}</span><h3>{stage.name}</h3><p>{stage.text}</p></article>)}</div></div></section><ContactBand/></main><Footer/></>;}
