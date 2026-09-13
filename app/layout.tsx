@@ -14,5 +14,6 @@ export const metadata: Metadata = {
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
-  return <html lang="en" className={`${GeistSans.variable} ${GeistMono.variable}`}><body>{children}<MotionSystem /></body></html>;
+  const organization = { '@context': 'https://schema.org', '@type': 'Organization', name: 'Hashbay Technology Private Limited', telephone: '+917899347270', email: 'contact@hashbaytechnology.com', address: { '@type': 'PostalAddress', addressLocality: 'Bangalore', addressCountry: 'IN' }, ...(siteUrl ? { url: siteUrl.toString() } : {}) };
+  return <html lang="en" className={`${GeistSans.variable} ${GeistMono.variable}`}><body><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(organization).replace(/</g, '\\u003c') }} />{children}<MotionSystem /></body></html>;
 }

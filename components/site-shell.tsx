@@ -1,8 +1,32 @@
 import Link from 'next/link';
-import { ArrowUpRight, ArrowRight } from 'lucide-react';
+import Image from 'next/image';
+import { ArrowRight, ArrowUpRight } from 'lucide-react';
 import { Brand } from './site-header';
+import { capabilities } from '@/lib/content';
 export { Header, Brand } from './site-header';
 
-export function ContactBand() { return <section className="contact-band"><div className="cta-lines" aria-hidden="true">{Array.from({length:7},(_,i)=><i key={i} style={{inset: `${i*26-70}px`}}/>)}</div><div className="shell"><div className="section-label"><span>What comes next</span><span>Let&apos;s build it together</span></div><Link className="contact-invitation" href="/contact" data-reveal><h2>Let&apos;s move<br /><span>forward.</span></h2><span className="cta-arrow"><ArrowUpRight strokeWidth={1} /></span></Link><div className="cta-bottom"><p>Infrastructure. Cloud. Security. People.<br />Start with the technology work ahead.</p><Link className="text-link light" href="/contact">Start a conversation <ArrowRight size={18} /></Link></div></div></section>; }
-export function Footer() { return <footer className="footer"><div className="shell"><div className="footer-top"><Brand /><p>Technology that keeps<br />business moving.</p><nav aria-label="Footer navigation">{[['About','/about'],['Services','/services'],['Training','/training'],['Contact','/contact']].map(([label,href])=><Link key={href} href={href}>{label}<ArrowUpRight size={14}/></Link>)}</nav><a className="footer-phone" href="tel:+917899347270">+91 7899347270<ArrowUpRight size={17}/></a></div><div className="footer-wordmark" aria-hidden="true">HASHBAY</div><div className="footer-bottom"><span>Hashbay Technology Private Limited</span><span>Bangalore, India</span><a href="#main">Back to top <ArrowUpRight size={14}/></a></div></div></footer>; }
-export function PageHero({ label, title, accent, description }: { label: string; title: string; accent: string; description: string }) { return <section className="page-hero"><div className="page-linework" aria-hidden="true"/><div className="shell"><p className="section-label">{label}</p><h1 className="page-title"><span>{title}</span><br/><em>{accent}</em></h1><div className="page-intro"><span className="crosshair" aria-hidden="true">+</span><p>{description}</p></div></div></section>; }
+export function ContactBand() {
+  return <section className="contact-band"><div className="shell contact-band-inner">
+    <div><p className="eyebrow">The next conversation</p><h2>What does your<br />business need next?</h2></div>
+    <div><p>Start with your requirements. Let&apos;s connect them with the right technology services.</p><Link className="button" href="/contact">Talk to Hashbay <ArrowRight size={19} /></Link></div>
+  </div></section>;
+}
+
+export function Footer() {
+  return <footer className="footer"><div className="shell">
+    <div className="footer-main"><div className="footer-identity"><Brand /><p>Technology that keeps<br />business moving.</p><a className="text-link" href="tel:+917899347270">+91 7899347270 <ArrowUpRight size={17} /></a></div>
+      <nav aria-label="Footer services"><h2>Our capabilities</h2>{capabilities.map(service => <Link key={service.id} href={`/services#${service.id}`}>{service.name}</Link>)}</nav>
+      <nav aria-label="Footer navigation"><h2>Hashbay</h2><Link href="/about">About Hashbay</Link><Link href="/training">Training</Link><Link href="/contact">Contact us</Link></nav>
+      <div className="footer-location"><h2>Get in touch</h2><a className="footer-email" href="mailto:contact@hashbaytechnology.com">contact@hashbaytechnology.com</a><p>Bangalore, India</p><a className="text-link" href="#main">Back to top <ArrowUpRight size={16} /></a></div>
+    </div>
+    <div className="footer-bottom"><span>Hashbay Technology Private Limited</span><span>Bangalore, India</span></div>
+  </div></footer>;
+}
+
+export function PageHero({ label, title, description, children }: { label: string; title: string; description: string; children?: React.ReactNode }) {
+  return <section className="page-hero"><div className="shell"><p className="eyebrow">{label}</p><div className="page-hero-grid"><h1>{title}</h1><div><p className="lead">{description}</p>{children}</div></div></div></section>;
+}
+
+export function EditorialImage({ kind = 'engineering', className = '', priority = false }: { kind?: 'engineering' | 'network'; className?: string; priority?: boolean }) {
+  return <figure className={`editorial-image ${className}`}><div className="image-window" data-reveal><Image src={`/images/${kind}-illustration.webp`} alt={kind === 'engineering' ? 'AI-generated illustration of hands positioning a memory module inside a computer.' : 'AI-generated illustration of blue Ethernet cables connected to a metal network panel.'} fill sizes="(max-width: 767px) 100vw, 60vw" preload={priority} /></div><figcaption>AI-generated technology illustration. Not Hashbay {kind === 'engineering' ? 'staff or client work' : 'facilities'}.</figcaption></figure>;
+}
