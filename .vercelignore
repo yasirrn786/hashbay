@@ -1,0 +1,4 @@
+reference/
+.qa-temp/
+docs/
+*.tsbuildinfo

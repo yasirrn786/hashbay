@@ -4,8 +4,9 @@ import { ArrowRight, ArrowUpRight } from 'lucide-react';
 import { Header, Footer, ContactBand, PageHero } from '@/components/site-shell';
 import { capabilities } from '@/lib/content';
 import { ServiceIndex } from '@/components/service-index';
+import { canonicalMetadata } from '@/lib/site';
 
-export const metadata: Metadata = { title: 'IT Services & Capabilities', description: 'Explore Hashbay infrastructure, cloud, cybersecurity, software development, IT staffing, AMC and operational support services.' };
+export const metadata: Metadata = { title: 'IT Services & Capabilities', description: 'Explore Hashbay infrastructure, cloud, cybersecurity, software development, IT staffing, AMC and operational support services.', ...canonicalMetadata('/services') };
 
 export default function ServicesPage() {
   return <><Header /><main id="main">

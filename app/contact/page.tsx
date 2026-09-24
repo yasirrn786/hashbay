@@ -3,8 +3,9 @@ import Link from 'next/link';
 import { ArrowRight, ArrowUpRight, Phone, Mail } from 'lucide-react';
 import { Header, Footer } from '@/components/site-shell';
 import { CopyPhone } from '@/components/copy-phone';
+import { canonicalMetadata } from '@/lib/site';
 
-export const metadata: Metadata = { title: 'Contact Hashbay', description: 'Call Hashbay Technology Private Limited on +91 7899347270 to discuss IT services, professional services or training requirements.' };
+export const metadata: Metadata = { title: 'Contact Hashbay', description: 'Call or email Hashbay Technology Private Limited to discuss IT services, professional services or training requirements.', ...canonicalMetadata('/contact') };
 
 export default function ContactPage() {
   return <><Header /><main id="main">

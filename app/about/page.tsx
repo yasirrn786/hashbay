@@ -3,8 +3,9 @@ import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
 import { Header, Footer, ContactBand, PageHero, EditorialImage } from '@/components/site-shell';
 import { DeliveryFramework } from '@/components/delivery-framework';
+import { canonicalMetadata } from '@/lib/site';
 
-export const metadata: Metadata = { title: 'About Hashbay', description: 'Meet Hashbay Technology Private Limited, a Bangalore-based IT manpower consultancy and professional services company.' };
+export const metadata: Metadata = { title: 'About Hashbay', description: 'Meet Hashbay Technology Private Limited, a Bangalore-based IT manpower consultancy and professional services company.', ...canonicalMetadata('/about') };
 
 export default function AboutPage() {
   return <><Header /><main id="main">

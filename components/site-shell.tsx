@@ -28,5 +28,5 @@ export function PageHero({ label, title, description, children }: { label: strin
 }
 
 export function EditorialImage({ kind = 'engineering', className = '', priority = false }: { kind?: 'engineering' | 'network'; className?: string; priority?: boolean }) {
-  return <figure className={`editorial-image ${className}`}><div className="image-window" data-reveal><Image src={`/images/${kind}-illustration.webp`} alt={kind === 'engineering' ? 'AI-generated illustration of hands positioning a memory module inside a computer.' : 'AI-generated illustration of blue Ethernet cables connected to a metal network panel.'} fill sizes="(max-width: 767px) 100vw, 60vw" preload={priority} /></div><figcaption>AI-generated technology illustration. Not Hashbay {kind === 'engineering' ? 'staff or client work' : 'facilities'}.</figcaption></figure>;
+  return <figure className={`editorial-image ${className}`}><div className="image-window" data-reveal><Image src={`/images/${kind}-illustration.webp`} alt={kind === 'engineering' ? 'Hands positioning a memory module inside an open computer.' : 'Blue Ethernet cables connected to a metal network panel.'} fill sizes="(max-width: 767px) 100vw, 60vw" preload={priority} /></div><figcaption>Concept image. Not Hashbay {kind === 'engineering' ? 'staff or client work' : 'facilities'}.</figcaption></figure>;
 }

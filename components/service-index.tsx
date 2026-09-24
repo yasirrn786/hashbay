@@ -8,6 +8,9 @@ import { capabilities } from '@/lib/content';
 export function ServiceIndex() {
   const [active, setActive] = useState<string>(capabilities[0].id);
   useEffect(() => {
+    const hash = location.hash.slice(1);
+    const target = hash ? document.getElementById(hash) : null;
+    const anchorFrame = target ? requestAnimationFrame(() => target.scrollIntoView({ block: 'start' })) : 0;
     let frame = 0;
     const update = () => {
       frame = 0;
@@ -17,7 +20,7 @@ export function ServiceIndex() {
     const onScroll = () => { if (!frame) frame = requestAnimationFrame(update); };
     update();
     addEventListener('scroll', onScroll, { passive: true });
-    return () => { removeEventListener('scroll', onScroll); cancelAnimationFrame(frame); };
+    return () => { removeEventListener('scroll', onScroll); cancelAnimationFrame(frame); cancelAnimationFrame(anchorFrame); };
   }, []);
   return <aside className="service-index"><p className="eyebrow">Explore our capabilities</p><nav aria-label="On this page">{capabilities.map((service, index) => <a key={service.id} href={`#${service.id}`} aria-current={active === service.id ? 'location' : undefined}><span className="index">0{index + 1}</span>{service.name}<ArrowUpRight size={15} /></a>)}</nav><Link className="text-link" href="/training">Technology training <ArrowRight size={16} /></Link></aside>;
 }

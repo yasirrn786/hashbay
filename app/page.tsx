@@ -1,9 +1,13 @@
 import Image, { getImageProps } from 'next/image';
+import type { Metadata } from 'next';
 import Link from 'next/link';
 import { ArrowRight, ArrowDown, ArrowUpRight, Cloud, ShieldCheck } from 'lucide-react';
 import { Header, Footer, ContactBand, EditorialImage } from '@/components/site-shell';
 import { DeliveryFramework } from '@/components/delivery-framework';
 import { capabilities } from '@/lib/content';
+import { canonicalMetadata } from '@/lib/site';
+
+export const metadata: Metadata = { ...canonicalMetadata('/') };
 
 export default function Home() {
   const { props: mobileHero } = getImageProps({ src: '/images/network-mobile-illustration.webp', alt: '', width: 1024, height: 1536, sizes: '100vw' });
@@ -11,7 +15,7 @@ export default function Home() {
     <section className="home-hero" aria-labelledby="hero-title">
       <div className="hero-image"><picture><source media="(max-width: 767px)" srcSet={mobileHero.srcSet} sizes="100vw" /><Image src="/images/network-illustration.webp" alt="" fill loading="eager" fetchPriority="high" sizes="100vw" /></picture></div>
       <div className="shell hero-content"><p className="eyebrow">Hashbay Technology / IT services</p><h1 id="hero-title">Technology that<br />keeps business<br /><span>moving.</span></h1><p className="hero-description">Infrastructure, cloud, cybersecurity, software and the people who bring it together.</p><Link className="button" href="/contact">Let&apos;s talk about your business <ArrowRight size={19} /></Link></div>
-      <div className="shell hero-bottom"><a href="#capabilities">Explore our capabilities <ArrowDown size={17} /></a><span></span></div>
+      <div className="shell hero-bottom"><a href="#capabilities">Explore our capabilities <ArrowDown size={17} /></a><span>Concept image</span></div>
     </section>
 
     <section className="capabilities section" id="capabilities"><div className="shell">
