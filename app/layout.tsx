@@ -3,15 +3,16 @@ import { GeistSans } from "geist/font/sans";
 import { GeistMono } from "geist/font/mono";
 import "./globals.css";
 import { MotionSystem } from '@/components/motion-system';
-import { siteUrl } from '@/lib/site';
+import { siteIsIndexable, siteUrl } from '@/lib/site';
 
 export const metadata: Metadata = {
   title: { default: "Hashbay Technology | IT Services & Professional Support", template: "%s | Hashbay Technology" },
   description: "Hashbay Technology Private Limited delivers IT infrastructure, cloud, cybersecurity, software, staffing, support, and training services.",
+  verification: { google: process.env.GOOGLE_SITE_VERIFICATION || 'IdCHlHT_OYDXnXMS1lPs5P-wvpW2SO9-5DeNcQoBzlQ' },
   ...(siteUrl ? { metadataBase: siteUrl } : {}),
   ...(siteUrl ? { alternates: { canonical: siteUrl } } : {}),
   openGraph: { type: "website", locale: "en_IN", siteName: "Hashbay Technology", ...(siteUrl ? { url: siteUrl } : {}), title: "Hashbay Technology | Technology that keeps business moving.", description: "IT infrastructure, cloud, cybersecurity, software, staffing, support, and training services." },
-  robots: { index: Boolean(siteUrl), follow: Boolean(siteUrl) },
+  robots: { index: siteIsIndexable, follow: siteIsIndexable },
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
