@@ -1,0 +1,29 @@
+HASHBAY PROJECT HANDOVER CHECKLIST
+Agree the applicable items in the project scope. Not every project needs every item.
+
+A. Ownership
+Customer account and repository owners recorded
+Source files and configuration delivered as agreed
+Pre-existing and third-party components identified with licence terms
+Temporary access and credential transfer handled securely
+
+B. Operation
+Dependencies and versions listed
+Deployment instructions tested by someone who did not build the system
+Operating guide and escalation contact documented
+Backup/restore procedure tested where included
+Known issues and residual dependencies recorded
+
+C. Acceptance
+Named acceptance tests run and evidence recorded
+Customer walkthrough scheduled
+Responsible customer contact confirms receipt
+Failed tests resolved or recorded before sign-off
+
+D. Exit and support
+Temporary access revoked
+Service hours and separately agreed support period confirmed
+Renewals, recurring costs and exit responsibilities recorded
+Open tasks assigned to a named owner
+
+Do not put secrets in public documentation.

@@ -1,0 +1,36 @@
+HASHBAY PROJECT SCOPE WORKSHEET
+Use this to prepare a discussion. It is not a quotation or service agreement.
+
+1. Goal
+What needs to change? Who uses the result?
+What is one observable example of success?
+
+2. Included work
+List named features, systems, assets, workloads or modules.
+Record quantities: users, devices, locations, included hours.
+
+3. Boundaries
+What is excluded? What third-party access or permission is needed?
+List unknown integrations, legacy systems and data migration.
+Do not include passwords or private customer records.
+
+4. People and timing
+Customer owner:
+Delivery lead and reviewer:
+Location and remote/on-site requirement:
+Preferred dates and change windows:
+Availability confirmed:
+
+5. Acceptance
+Named test:
+Expected result:
+Who checks it:
+How defects or dependencies are recorded:
+
+6. Commercial review
+Labour, licences, hardware, travel, taxes and recurring costs:
+Discovery needed before a fixed quote:
+Payment milestones and change-approval process:
+Support hours, handover and exit work:
+
+Confirm the final scope and commercial terms in writing before work starts.

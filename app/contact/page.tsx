@@ -1,15 +1,51 @@
-import type { Metadata } from 'next';
-import Link from 'next/link';
-import { ArrowRight, ArrowUpRight, Phone, Mail } from 'lucide-react';
-import { Header, Footer } from '@/components/site-shell';
-import { CopyPhone } from '@/components/copy-phone';
-import { canonicalMetadata } from '@/lib/site';
-
-export const metadata: Metadata = { title: 'Contact Hashbay', description: 'Call or email Hashbay Technology Private Limited to discuss IT services, professional services or training requirements.', ...canonicalMetadata('/contact') };
-
-export default function ContactPage() {
-  return <><Header /><main id="main">
-    <section className="contact-page"><div className="shell"><p className="eyebrow">Contact Hashbay</p><h1>Let&apos;s start with<br />what you need.</h1><div className="contact-layout"><div><p className="lead">A new technology project, support for an existing environment, or the next step in your learning.</p><p>Tell us about your requirements and the work ahead.</p></div><div className="contact-direct"><div className="contact-call-label"><Phone size={19} /><span>Call Hashbay</span></div><a className="phone-link" href="tel:+917899347270">+91 7899347270 <ArrowUpRight size={30} /></a><CopyPhone /><div className="contact-email"><div className="contact-call-label"><Mail size={19} /><span>Email Hashbay</span></div><a href="mailto:contact@hashbaytechnology.com">contact@hashbaytechnology.com <ArrowUpRight size={20} /></a></div><div className="contact-location"><span>Based in</span><p>Bangalore, India</p></div></div></div></div></section>
-    <section className="contact-topics section"><div className="shell"><div className="section-intro"><p className="eyebrow">A starting point</p><h2>Bring us the context.<br />We&apos;ll talk through the possibilities.</h2></div><div className="contact-topic-grid">{[['Technology services', 'Your current environment, the challenge you are addressing and the scope you have in mind.', '/services', 'Explore services'], ['Professional services', 'The technical skills, project requirements and on-site or off-site support you need.', '/services#professional-services', 'Explore professional services'], ['Training', 'Your background, learning goals and the technology discipline you want to develop.', '/training', 'Explore training']].map(([title, description, href, label]) => <div key={title}><h3>{title}</h3><p>{description}</p><Link className="text-link" href={href}>{label}<ArrowRight size={17} /></Link></div>)}</div></div></section>
-  </main><Footer /></>;
+import type { Metadata } from "next";
+import { canonicalMetadata } from "@/lib/site";
+import { company, programs, services } from "@/lib/content";
+import { BriefBuilder } from "@/components/brief-builder";
+export const metadata: Metadata = {
+  title: "Contact & Project Brief",
+  description:
+    "Discuss an IT, software or training project with Hashbay. Prepare a clear brief, inspect it and send it directly by email.",
+  ...canonicalMetadata("/contact"),
+};
+export default async function Contact({
+  searchParams,
+}: {
+  searchParams: Promise<{ service?: string; course?: string }>;
+}) {
+  const params = await searchParams;
+  const course = programs.find((p) => p.slug === params.course);
+  return (
+    <section className="contact-layout container">
+      <div className="contact-intro">
+        <h1>
+          Start with
+          <br />
+          the problem.
+        </h1>
+        <p className="lead">
+          Tell us what needs to change. We will use your brief to discuss scope,
+          availability and next steps.
+        </p>
+        <div className="contact-note">
+          <h2>A useful first conversation.</h2>
+          <ol>
+            <li>Your goal</li>
+            <li>Your constraints</li>
+            <li>Your definition of done</li>
+          </ol>
+        </div>
+        <div className="contact-direct">
+          <a href={`mailto:${company.email}`}>{company.email}</a>
+          <a href={`tel:${company.phone}`}>{company.phoneDisplay}</a>
+        </div>
+      </div>
+      <BriefBuilder
+        key={course?.slug || params.service || "general"}
+        serviceNames={services.map((s) => s.name)}
+        initialService={course ? "Training" : params.service}
+        initialCourse={course?.name}
+      />
+    </section>
+  );
 }

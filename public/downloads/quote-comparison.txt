@@ -1,0 +1,22 @@
+HASHBAY QUOTE COMPARISON CHECKLIST
+Compare the same scope, not just the headline price.
+
+For each supplier record:
+1. Scope and quantities: users, devices, systems, included tasks and hours
+2. Service window and contact method
+3. Response target, resolution dependencies and escalation owner
+4. Remote work and separately confirmed on-site coverage
+5. Labour and onboarding
+6. Hardware, spare parts and damage exclusions
+7. Licences, platform subscriptions and third-party charges
+8. Travel and location-specific costs
+9. Taxes and total payable
+10. One-time versus recurring charges
+11. Approved overage rates and change process
+12. Acceptance, handover, support duration and exit charges
+13. Ownership of accounts, source files and licensed components
+14. Cancellation and payment milestones
+15. Availability of the delivery lead and any specialist
+
+Unknown systems may need a paid assessment before a fixed price.
+This is a discussion worksheet, not a price list or contract.

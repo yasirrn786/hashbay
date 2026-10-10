@@ -1,18 +1,59 @@
-import type { Metadata } from 'next';
-import Link from 'next/link';
-import { ArrowRight } from 'lucide-react';
-import { Header, Footer, ContactBand, PageHero, EditorialImage } from '@/components/site-shell';
-import { DeliveryFramework } from '@/components/delivery-framework';
-import { canonicalMetadata } from '@/lib/site';
-
-export const metadata: Metadata = { title: 'About Hashbay', description: 'Meet Hashbay Technology Private Limited, a Bangalore-based IT manpower consultancy and professional services company.', ...canonicalMetadata('/about') };
-
-export default function AboutPage() {
-  return <><Header /><main id="main">
-    <PageHero label="About Hashbay Technology" title="Technology is only part of the equation." description="The people applying it, the processes around it and the purpose behind it matter just as much." />
-    <section className="about-story shell"><EditorialImage priority /><div><p className="eyebrow">Our company</p><h2>People. Processes.<br />Systems. Together.</h2><p className="lead">Hashbay Technology Private Limited is an IT manpower consultancy and professional services company headquartered in Bangalore, India.</p><p>We provide staffing, consulting and technology services to support project goals and operational efficiency. Our capabilities span IT infrastructure, cloud, cybersecurity, software development, maintenance, customer support and technical training.</p><p>With on-site and off-site professional services, Hashbay connects technical work with the people and support it needs.</p><Link className="text-link" href="/services">Explore our services <ArrowRight size={18} /></Link></div></section>
-    <section className="priorities section"><div className="shell"><div className="section-intro"><p className="eyebrow">What guides the work</p><h2>A focus on the project.<br />A view of the whole environment.</h2></div><div className="priority-rows">{[['Project requirements', 'Align professional and technology services with the work that needs to be delivered.'], ['Operational efficiency', 'Consider how people, processes and systems work together in day-to-day operations.'], ['Ongoing attention', 'Connect implementation with maintenance, service desk and support capabilities.']].map(([title, text], index) => <div key={title}><span className="index">0{index + 1}</span><h3>{title}</h3><p>{text}</p></div>)}</div></div></section>
-    <DeliveryFramework />
-    <ContactBand />
-  </main><Footer /></>;
+import type { Metadata } from "next";
+import Link from "next/link";
+import { canonicalMetadata } from "@/lib/site";
+import { commitments } from "@/lib/content";
+import { ContactBand } from "@/components/site-shell";
+export const metadata: Metadata = {
+  title: "About Hashbay",
+  description:
+    "Hashbay Technology Private Limited is building an understandable approach to IT services, software and practical training.",
+  ...canonicalMetadata("/about"),
+};
+export default function About() {
+  return (
+    <>
+      <section className="reading-page about-page container split">
+        <h1>
+          Good technology.
+          <br />
+          Understood by people.
+        </h1>
+        <div className="split-right">
+          <p className="lead">
+            Hashbay Technology Private Limited brings together IT services,
+            software and practical training. We are building the company around
+            a simple standard: make the work understandable.
+          </p>
+          <h2 style={{ fontSize: 38, marginTop: 42 }}>
+            The commitments behind a project.
+          </h2>
+          <ol className="numbered-list">
+            {commitments.map((c, i) => (
+              <li key={c.title}>
+                <span className="row-number" aria-hidden="true">
+                  {String(i + 1).padStart(2, "0")}
+                </span>
+                <div>
+                  <h3>{c.title}</h3>
+                  <p>{c.text}</p>
+                </div>
+              </li>
+            ))}
+          </ol>
+          <p className="scope-note" style={{ marginTop: 25 }}>
+            Based in Bangalore, India. Delivery location, expertise and
+            availability are agreed per project.
+          </p>
+          <Link
+            className="text-button"
+            href="/approach"
+            style={{ display: "inline-block", marginTop: 28 }}
+          >
+            Read our working approach
+          </Link>
+        </div>
+      </section>
+      <ContactBand />
+    </>
+  );
 }
